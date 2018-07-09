@@ -17,8 +17,9 @@
     <% end %>
 
     <%= render 'layouts/navigation' %>
-    <div class="p-4 container d-flex align-items-center flex-column">
+    <div id="blah" class="p-4 container d-flex align-items-center flex-column">
       <%= yield %>
     </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

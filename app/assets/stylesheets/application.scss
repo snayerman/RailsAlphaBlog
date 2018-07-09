@@ -14,11 +14,20 @@
  *= require_self
  */
 @import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Coda+Caption:800');
 
 body {
    background-color: lightgray;
    background-image: url('https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg');
    background-size: cover;
+}
+
+#blah {
+   height: 80vh;
+}
+
+.headerText {
+   font-family: 'Coda Caption', sans-serif;
 }
 
 .btn-fixed {
@@ -33,4 +42,38 @@ body {
       display: flex;
       justify-content: flex-start;
    }
+}
+
+.footerBot {
+   margin-top: 45px;
+   padding-top: 5px;
+   border-top: 1px solid #eaeaea;
+   color: #777;
+}
+
+footer {
+   
+   small {
+      margin-left: 10px;
+   }
+
+   ul {
+      list-style: none;
+   }
+}
+
+button {
+   a {
+      color: #fff;
+      text-decoration: none;
+   }
+
+   a:hover {
+      color: #fff;
+      text-decoration: none;
+   }
+}
+
+table {
+   margin: 10px;
 }

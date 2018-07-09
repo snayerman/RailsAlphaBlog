@@ -1,7 +1,4 @@
-<h1>Viewing all articles</h1>
-<p>
-   <%= link_to "Create new article", new_article_path %>
-</p>
+<h1 class="headerText">Viewing all articles</h1>
 
 <table>
    <tr>
@@ -21,3 +18,9 @@
       </tr>
    <% end %>
 </table>
+
+<p>
+   <button type="button" class="btn btn-primary btn-block">
+      <%= link_to "Create New Article", new_article_path %>
+   </button>
+</p>

@@ -1,14 +1,21 @@
-<h1>Viewing Article</h1>
+<h1 class="headerText">Viewing Article</h1>
 
-<p>
-   Title: 
-   <%= @article.title %>
-</p>
+<div>
+   <p>
+      Title: 
+      <%= @article.title %>
+   </p>
 
-<p>
-   Description: 
-   <%= @article.description %>
-</p>
+   <p>
+      Description: 
+      <%= @article.description %>
+   </p>
 
-<%= link_to "Edit this article", edit_article_path(@article) %>
-<%= link_to "Back to articles listing", articles_path %>
+   <button type="button" class="btn btn-success btn-block">
+      <%= link_to "Edit this article", edit_article_path(@article) %>
+   </button>
+
+   <button type="button" class="btn btn-danger btn-block">
+      <a href="/articles">Back To Articles</a>
+   </button>
+</div>
