@@ -1,14 +1,22 @@
 <body>
-   <div class="container">
-      <div class="header">
-         <h1>Home Page</h1>
+   <div>
+      <div class="d-flex p-5 flex-row justify-content-center">
+         <h1>ALPHA BLOG</h1>
       </div>
       
-      <div class="footer">
-         <div class="leftSide">Left Side</div>
-         <div class="rightSide">Right Side</div>
+      <div class="d-flex flex-column justify-content-between">
+         <%# <div class="footer">
+            <div class="leftSide">Left Side</div>
+            <div class="rightSide">Right Side</div>
+         </div> %>
+
+         <div class="d-flex flex-row justify-content-center w-100">
+            <div class="btn-group w-100">
+               <%= link_to "Login", "#", class: "btn btn-success btn-fixed" %>
+               <%= link_to "Sign Up", "#", class: "btn btn-primary btn-fixed" %>
+            </div>
+         </div>
       </div>
    </div>
-</body>
 
-<%= link_to "Alpha Blog", articles_path %> | <%= link_to 'About', about_path %>
+</body>

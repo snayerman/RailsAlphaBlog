@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+
+body {
+   background-color: lightgray;
+   background-image: url('https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg');
+   background-size: cover;
+}
+
+.btn-fixed {
+   width: 50%;
+}
+
+.footer {
+   display: flex;
+   justify-content: center;
+
+   .leftSide {
+      display: flex;
+      justify-content: flex-start;
+   }
+}
