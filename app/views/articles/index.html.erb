@@ -1,23 +1,32 @@
 <h1 class="headerText">Viewing all articles</h1>
 
-<table>
-   <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Description</th>
-   </tr>
 
    <% @articles.each do |article| %>
-      <tr>
-         <td><%= article.id %></td>
-         <td><%= article.title %></td>
-         <td><%= article.description %></td>
-         <td><%= link_to 'Edit', edit_article_path(article) %></td>
-         <td><%= link_to 'Show', article_path(article) %></td>
-         <td><%= link_to 'Destroy', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
-      </tr>
+      <div class="row">
+         <div class="col-xs-8 col-xs-offset-2">
+            <div class="card bg-light" style="width: 40rem; margin: 10px;">
+               <div class="article-title card-title">
+                  <%= link_to article.title, article_path(article) %>
+               </div>
+
+               <div class="article-body card-body" style="text-align: center;">
+                  <%= truncate(article.description, length: 100) %>
+               </div>
+               
+               <div class="d-flex justify-content-center">
+                  <div class="article-actions">
+                     <div class="btn-group">
+                        <%= link_to 'Edit', edit_article_path(article), class: "btn btn-success btn-block btn-action" %>
+                        <%= link_to 'Show', article_path(article), class: "btn btn-primary btn-block btn-action" %>
+                        <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-block btn-action" %>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
    <% end %>
-</table>
 
 <p>
    <button type="button" class="btn btn-primary btn-block">

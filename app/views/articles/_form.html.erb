@@ -8,23 +8,21 @@
 <% end %>
 
 <%= form_for @article do |f| %>
-   <p>
-      <%= f.label :title %>
-      </br>
-      <%= f.text_field :title %>
-   </p>
+   <div style="width: 40rem; margin: 10px;">
+      <div class="form-group">
+         <%= f.label :title %>
+         <%= f.text_field :title, class: "form-control", placeholder: "Enter title" %>
+      </div>
 
-   <p>
-      <%= f.label :description %>
-      </br>
-      <%= f.text_area :description %>
-   </p>
+      <div class="form-group">
+         <%= f.label :description %>
+         <%= f.text_area :description, class: "form-control", placeholder: "Enter description" %>
+      </div>
 
-   <p>
-      <input type="submit" class="btn btn-primary btn-block" value="Submit"></input>
-   </p>
+      <div class="form-group">
+         <input type="submit" class="btn btn-primary btn-block" value="Submit"></input>
+      </div>
 
-   <button type="button" class="btn btn-danger btn-block">
-      <a href="/articles">Back To Articles</a>
-   </button>
+      <a href="/articles" class="btn btn-danger btn-block">Back To Articles</a>
+   </div>
 <% end %>
