@@ -1,8 +1,10 @@
 class ArticlesController < ApplicationController
+   before_action :verifyLoggedIn
    before_action :set_article, only: [:edit, :update, :show, :destroy]
 
    def index
-      @articles = Article.all
+      # @articles = Article.all
+      @articles = Article.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
    end
 
    def new
@@ -49,7 +51,13 @@ class ArticlesController < ApplicationController
          @article = Article.find(params[:id])
       end
 
-      def article_params()
-         params.require(:article).permit(:title, :description)
+      def article_params()   
+         params.require(:article).permit(:title, :description).merge(user_id: getCurrUser().id)
+      end
+
+      def verifyLoggedIn()
+         if !loggedIn?()
+            redirect_to '/'
+         end
       end
 end
